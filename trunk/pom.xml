@@ -7,8 +7,8 @@
     <artifactId>quentinha</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>AppFuse Struts 2 Application</name>
-    <url>http://www.mycompany.com</url>
+    <name>Quentinha</name>
+    <url></url>
 
     <prerequisites>
         <maven>2.0.4</maven>
@@ -16,14 +16,14 @@
 
     <licenses>
         <license>
-            <name></name>
+            <name>Apache 2.0</name>
             <url></url>
         </license>
     </licenses>
 
     <scm>
-        <connection></connection>
-        <developerConnection></developerConnection>
+        <connection>http://quentinha.googlecode.com/svn/trunk/</connection>
+        <developerConnection>https://quentinha.googlecode.com/svn/trunk/</developerConnection>
         <url></url>
     </scm>
 
@@ -34,10 +34,10 @@
 
     <developers>
         <developer>
-            <id></id>
-            <name></name>
-            <email></email>
-            <timezone></timezone>
+            <id>julianojulio</id>
+            <name>Juliano Julio</name>
+            <email>juliano@brasileiros.com.br</email>
+            <timezone>-3</timezone>
         </developer>
     </developers>
 	
