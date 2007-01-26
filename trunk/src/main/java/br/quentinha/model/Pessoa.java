@@ -1,4 +1,4 @@
-package jj.quentinha.model;
+package br.quentinha.model;
 
 import java.util.Calendar;
 
