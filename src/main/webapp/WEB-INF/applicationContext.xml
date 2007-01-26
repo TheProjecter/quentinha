@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="pessoaManager" class="org.appfuse.service.impl.GenericManagerImpl"> 
+	    <constructor-arg> 
+	        <bean class="org.appfuse.dao.hibernate.GenericDaoHibernate" autowire="byType"> 
+	            <constructor-arg value="br.quentinha.model.Pessoa"/> 
+	        </bean> 
+	    </constructor-arg> 
+	</bean> 
+
+	<bean id="pessoaDao" class="br.quentinha.dao.hibernate.PessoaDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean class="org.appfuse.dao.spring.HibernateExtensionPostProcessor">
+		<property name="annotatedClasses">
+			<list>
+				<value>br.quentinha.model.Pessoa</value>
+			</list>
+		</property>
+	</bean>
+</beans>

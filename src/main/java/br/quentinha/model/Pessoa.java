@@ -2,24 +2,26 @@ package br.quentinha.model;
 
 import java.util.Calendar;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
-import org.appfuse.model.BaseObject;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
+import org.appfuse.model.BaseObject;
 
+@Entity
+@SequenceGenerator(name=Pessoa.PESSOA_SEQ, sequenceName=Pessoa.PESSOA_SEQ, initialValue=1000)
 public class Pessoa extends BaseObject {
     
     private static final long serialVersionUID = -5516199305790397008L;
-    private static final String PESSOA_SEQ = "PESSOA_SEQ";
+    public static final String PESSOA_SEQ = "PESSOA_SEQ";
 
     @Id @GeneratedValue(generator=PESSOA_SEQ, strategy=GenerationType.SEQUENCE)
-    @SequenceGenerator(name=PESSOA_SEQ, sequenceName=PESSOA_SEQ)
     private Long id;
     private String nome;
     private String sobreNome;

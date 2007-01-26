@@ -90,4 +90,18 @@
       <value>1</value>
     </row>
   </table>
+	<table name='pessoa'> 
+	  <column>id</column> 
+	  <column>nome</column> 
+	  <column>sobreNome</column> 
+	  <column>celular</column> 
+	  <column>email</column> 
+	  <row> 
+	    <value>1</value> 
+	    <value>Serjao</value> 
+	    <value>Reis</value> 
+	    <value>9244-2424</value> 
+	    <value>serjao@cs.com.br</value> 
+	  </row> 
+	</table>   
 </dataset>
