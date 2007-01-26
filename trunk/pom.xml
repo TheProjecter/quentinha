@@ -393,7 +393,7 @@
         <jdbc.artifactId>postgresql</jdbc.artifactId>
         <jdbc.version>8.1-407.jdbc3</jdbc.version>
         <jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
-        <jdbc.url><![CDATA[jdbc:postgresql://localhost/quentinha:5432]]></jdbc.url>
+        <jdbc.url><![CDATA[jdbc:postgresql://csd016/quentinha:5432]]></jdbc.url>
         <jdbc.username>quentinha</jdbc.username>
         <jdbc.password>quentinha</jdbc.password>         
 
