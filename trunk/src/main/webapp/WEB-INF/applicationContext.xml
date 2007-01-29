@@ -19,7 +19,7 @@
 		</property>
 	</bean>
 
-	<bean id="pessoaAction" class="br.quentinha.web.action.PessoaAction" scope="prototype">
+	<bean id="pessoaAction" class="br.quentinha.webapp.action.PessoaAction" scope="prototype">
 		<property name="pessoaManager" ref="pessoaManager" />
 	</bean>
 </beans>
