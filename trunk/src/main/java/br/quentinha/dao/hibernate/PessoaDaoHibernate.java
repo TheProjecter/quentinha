@@ -7,7 +7,7 @@ import org.appfuse.dao.hibernate.GenericDaoHibernate;
 import br.quentinha.dao.PessoaDao;
 import br.quentinha.model.Pessoa;
 
-public class PessoaDaoHibernate extends GenericDaoHibernate implements PessoaDao {
+public class PessoaDaoHibernate extends GenericDaoHibernate<Pessoa, Long> implements PessoaDao {
 
     public PessoaDaoHibernate() {
         super(Pessoa.class);
