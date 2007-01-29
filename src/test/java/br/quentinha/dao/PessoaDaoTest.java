@@ -9,9 +9,9 @@ import org.springframework.dao.DataAccessException;
 import br.quentinha.model.Pessoa;
 
 public class PessoaDaoTest extends BaseDaoTestCase {
-    private PessoaDao<Pessoa, Long> pessoaDao = null;
+    private PessoaDao pessoaDao = null;
 
-    public void setPessoaDao(PessoaDao<Pessoa, Long> pessoaDao) {
+    public void setPessoaDao(PessoaDao pessoaDao) {
         this.pessoaDao = pessoaDao;
     }
 
