@@ -1,4 +1,4 @@
-package br.quentinha.web.action;
+package br.quentinha.webapp.action;
 
 import java.util.List;
 

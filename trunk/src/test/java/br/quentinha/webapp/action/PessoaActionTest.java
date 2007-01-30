@@ -1,9 +1,10 @@
-package br.quentinha.web.action;
+package br.quentinha.webapp.action;
 
 import org.appfuse.webapp.action.BaseActionTestCase;
 
 import br.quentinha.model.Pessoa;
 import br.quentinha.service.PessoaManager;
+import br.quentinha.webapp.action.PessoaAction;
 
 import com.opensymphony.xwork2.ActionSupport;
  
