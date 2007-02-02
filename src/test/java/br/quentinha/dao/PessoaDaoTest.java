@@ -9,6 +9,7 @@ import org.springframework.dao.DataAccessException;
 import br.quentinha.model.Pessoa;
 
 public class PessoaDaoTest extends BaseDaoTestCase {
+    /*
     private PessoaDao pessoaDao = null;
 
     public void setPessoaDao(PessoaDao pessoaDao) {
@@ -45,4 +46,5 @@ public class PessoaDaoTest extends BaseDaoTestCase {
             assertNotNull(dae); 
         } 
     }     
+    */
 }
