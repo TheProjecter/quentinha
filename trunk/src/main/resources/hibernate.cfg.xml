@@ -2,9 +2,15 @@
     "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
-    <session-factory>
-        <mapping class="org.appfuse.model.User"/>
-        <mapping class="org.appfuse.model.Role"/>
-        <mapping class="br.quentinha.model.Pessoa"/>
-    </session-factory>
+	<session-factory>
+		<mapping class="org.appfuse.model.User" />
+		<mapping class="org.appfuse.model.Role" />
+		<!-- <mapping class="br.quentinha.model.Pessoa"/>  -->
+		<mapping class="br.quentinha.model.Cardapio" />
+		<mapping class="br.quentinha.model.ItemCardapio" />
+		<mapping class="br.quentinha.model.Pedido" />
+		<mapping class="br.quentinha.model.Quentinha" />
+		<mapping class="br.quentinha.model.Prato" />
+		<mapping class="br.quentinha.model.TipoQuentinha" />
+	</session-factory>
 </hibernate-configuration>
