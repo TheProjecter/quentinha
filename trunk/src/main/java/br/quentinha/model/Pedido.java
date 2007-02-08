@@ -7,6 +7,9 @@ import java.util.Collection;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -22,9 +25,13 @@ public class Pedido extends BaseObject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id = null;
-    private Calendar data = null;
+    
+    @Temporal(value=TemporalType.DATE)
+    private Calendar dia = null;
     private String observacao = null;
     private User user = null;
+    
+    @OneToMany
     private Collection<Quentinha> quentinhas = new ArrayList<Quentinha>();
 
     /**

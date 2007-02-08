@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 import org.appfuse.model.BaseObject;
 import org.apache.commons.lang.builder.EqualsBuilder;
@@ -24,6 +27,9 @@ public class ItemCardapio extends BaseObject {
     private Long id = null;
     private Prato prato = null;
     private Cardapio cardapio = null;
+    
+    @ManyToMany()
+    @JoinColumn(nullable=true, updatable=false)
     private Collection<Quentinha> quentinhas = new ArrayList<Quentinha>();
 
     /**

@@ -8,6 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -17,15 +21,20 @@ import org.appfuse.model.BaseObject;
 
 @Entity
 public class Cardapio extends BaseObject {
-
+    
     private static final long serialVersionUID = -5773758139127418400L;
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id = null;
-    private Calendar data = null;
-    private Collection <ItemCardapio> itens = new ArrayList<ItemCardapio>();
+    
+    @Temporal(value = TemporalType.DATE)
+    private Calendar dia = null;
 
+    @ManyToOne
+    @JoinColumn(nullable=true, updatable=false)
+    private Collection<ItemCardapio> itemCardapio = new ArrayList<ItemCardapio>();
+    
     /**
      * @see java.lang.Object#equals(Object)
      */
@@ -34,54 +43,54 @@ public class Cardapio extends BaseObject {
             return false;
         }
         Cardapio rhs = (Cardapio) object;
-        return new EqualsBuilder().append(this.data, rhs.data).append(this.itens, rhs.itens).isEquals();
+        return new EqualsBuilder().append(this.dia, rhs.dia).append(this.itemCardapio, rhs.itemCardapio).isEquals();
     }
-
+    
     /**
      * @see java.lang.Object#hashCode()
      */
     public int hashCode() {
-        return new HashCodeBuilder(-1611138121, 2078596875).append(this.data).append(this.itens).toHashCode();
+        return new HashCodeBuilder(-1611138121, 2078596875).append(this.dia).append(this.itemCardapio).toHashCode();
     }
-
+    
     /**
      * @see java.lang.Object#toString()
      */
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.DEFAULT_STYLE).toString();
     }
-
-    public Calendar getData() {
-        return data;
+    
+    public Calendar getDia() {
+        return dia;
     }
-
-    public void setData(Calendar data) {
-        this.data = data;
+    
+    public void setDia(Calendar dia) {
+        this.dia = dias;
     }
-
+    
     public Long getId() {
         return id;
     }
-
+    
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Collection<ItemCardapio> getItens() {
-        return itens;
+    
+    public Collection<ItemCardapio> getItemCardapio() {
+        return itemCardapio;
     }
-
-    protected void setItens(Collection<ItemCardapio> itens) {
-        this.itens = itens;
+    
+    protected void setItemCardapio(Collection<ItemCardapio> itemCardapio) {
+        this.itemCardapio = itemCardapio;
     }
     
     public void addItem(ItemCardapio item) {
         item.setCardapio(this);
-        this.itens.add(item);
+        this.itemCardapio.add(item);
     }
     
     public boolean removeItem(ItemCardapio item){
         item.setCardapio(null);
-        return this.itens.remove(item);
+        return this.itemCardapio.remove(item);
     }
 }

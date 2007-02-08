@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -22,9 +24,12 @@ public class Quentinha extends BaseObject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id = null;
-    private Collection<ItemCardapio> itensCardapio = new ArrayList<ItemCardapio>();
     private TipoQuentinha tipoQuentinha = null;
     private Pedido pedido = null;
+
+    @ManyToMany()
+    @JoinColumn(nullable=true, updatable=false)
+    private Collection<ItemCardapio> itensCardapio = new ArrayList<ItemCardapio>();
 
     /**
      * @see java.lang.Object#equals(Object)
