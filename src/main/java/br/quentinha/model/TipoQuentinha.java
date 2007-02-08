@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -26,6 +28,9 @@ public class TipoQuentinha extends BaseObject {
     private Double preco = null;
     private Boolean ativo = null;
     private String descricao = null;
+    
+    @OneToMany
+    @JoinColumn(nullable=true, updatable=false)
     private Collection<Quentinha> quentinhas = new ArrayList<Quentinha>();
 
     /**
