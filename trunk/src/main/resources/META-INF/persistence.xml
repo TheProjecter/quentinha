@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
-
-    <persistence-unit name="ApplicationEntityManager" transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <class>org.appfuse.model.User</class>
-        <class>org.appfuse.model.Role</class>
-    </persistence-unit>
-
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="ApplicationEntityManager" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>org.appfuse.model.User</class>
+    <class>org.appfuse.model.Role</class>
+    <class>br.quentinha.model.Cardapio</class>
+    <class>br.quentinha.model.ItemCardapio</class>
+    <class>br.quentinha.model.Pedido</class>
+    <class>br.quentinha.model.Prato</class>
+    <class>br.quentinha.model.Quentinha</class>
+    <class>br.quentinha.model.TipoQuentinha</class>
+    <properties>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.connection.url" value="jdbc:postgresql://localhost/quentinha:5432"/>
+      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+      <property name="hibernate.connection.password" value="quentinha"/>
+      <property name="hibernate.connection.username" value="quentinha"/>
+    </properties>
+  </persistence-unit>
 </persistence>

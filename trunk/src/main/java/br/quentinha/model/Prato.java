@@ -28,7 +28,7 @@ public class Prato extends BaseObject {
     private String nome = null;
     private Boolean acompanhamento = null;
     
-    @ManyToOne()
+    @OneToMany()
     @JoinColumn(nullable=true, updatable=false)
     private Collection<ItemCardapio> itensCardapio = new ArrayList<ItemCardapio>();
     
