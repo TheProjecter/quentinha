@@ -114,6 +114,7 @@
 		</action>
 
 		<!-- Add additional actions here -->
+                <!--
 		<action name="pessoas" class="pessoaAction" method="list">
 			<result>/WEB-INF/pages/pessoaList.jsp</result>
 		</action>
@@ -121,5 +122,6 @@
 		<action name="pessoas" class="pessoaAction" method="list">
 			<result>/WEB-INF/pages/pessoaList.jsp</result>
 		</action>
+                -->
 	</package>
 </struts>

@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -31,7 +32,7 @@ public class Cardapio extends BaseObject {
     @Temporal(value = TemporalType.DATE)
     private Calendar dia = null;
 
-    @ManyToOne
+    @OneToMany()
     @JoinColumn(nullable=true, updatable=false)
     private Collection<ItemCardapio> itemCardapio = new ArrayList<ItemCardapio>();
     
@@ -65,7 +66,7 @@ public class Cardapio extends BaseObject {
     }
     
     public void setDia(Calendar dia) {
-        this.dia = dias;
+        this.dia = dia;
     }
     
     public Long getId() {

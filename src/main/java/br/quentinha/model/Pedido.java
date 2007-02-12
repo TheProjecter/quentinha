@@ -42,7 +42,7 @@ public class Pedido extends BaseObject {
             return false;
         }
         Pedido rhs = (Pedido) object;
-        return new EqualsBuilder().append(this.user, rhs.user).append(this.data, rhs.data).append(this.quentinhas, rhs.quentinhas).append(
+        return new EqualsBuilder().append(this.user, rhs.user).append(this.dia, rhs.dia).append(this.quentinhas, rhs.quentinhas).append(
                 this.observacao, rhs.observacao).isEquals();
     }
 
@@ -50,16 +50,16 @@ public class Pedido extends BaseObject {
      * @see java.lang.Object#hashCode()
      */
     public int hashCode() {
-        return new HashCodeBuilder(-393634191, 1535427229).append(this.user).append(this.data).append(this.quentinhas).append(
+        return new HashCodeBuilder(-393634191, 1535427229).append(this.user).append(this.dia).append(this.quentinhas).append(
                 this.observacao).toHashCode();
     }
 
-    public Calendar getData() {
-        return data;
+    public Calendar getDia() {
+        return dia;
     }
 
-    public void setData(Calendar data) {
-        this.data = data;
+    public void setDia(Calendar dia) {
+        this.dia = dia;
     }
 
     public String getObservacao() {
