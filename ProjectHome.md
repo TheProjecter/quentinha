@@ -1,0 +1,1 @@
+Quentinha is the word used in Brazilian Portuguese for meals delivered in office. This system speed up the order process by providing a web interface where users are able to choose theirs meals.
